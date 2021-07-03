@@ -32,7 +32,6 @@ CREATE TABLE posts (
    ADD CONSTRAINT messages_to_user_id_fk
      FOREIGN KEY (to_user_id) REFERENCES users(id);
 
-
 -- 3. Определить кто больше поставил лайков (всего) - мужчины или женщины:
 SELECT
 	(SELECT gender FROM profiles WHERE user_id = likes.user_id) AS gender
